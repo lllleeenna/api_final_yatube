@@ -61,7 +61,6 @@ class CommentViewSet(viewsets.ModelViewSet):
 class FollowViewSet(CreateListViewSet):
     """Все подписки поьзователя, создание подписки."""
 
-    # queryset = Follow.objects.all()
     serializer_class = FollowSerializer
     permission_classes = (IsOwnerOrReadOnly, IsAuthenticated)
     filter_backends = (filters.SearchFilter,)
